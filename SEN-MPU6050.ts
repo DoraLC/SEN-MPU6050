@@ -41,7 +41,7 @@ enum axisXYZ {
 /**
   * SEN-MPU6050 Block
   */
-//% color="#275C6B" icon="\uf21d" weight=95 block="SEN-MPU6050"
+//% color="#275C6B" icon="\uf21d" block="Gyroscope"
 namespace SENMPU6050 {
     let i2cAddress = 0x68;
     let power_mgmt = 0x6b;
