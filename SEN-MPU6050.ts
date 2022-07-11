@@ -145,7 +145,7 @@ namespace SENMPU6050 {
         let buffer = pins.createBuffer(2);
         buffer[0] = 0x1A; //config_address
         buffer[1] = 0x06; //digital low pass filter level 6(MAX)
-        pins.i2cWriteBuffer(i2cAddress, buffer);
+        pins.i2cWriteBuffer(i2cAddress, buffer); //Low pass filter enable
         basic.pause(100);
         buffer[0] = power_mgmt;
         buffer[1] = 0;
