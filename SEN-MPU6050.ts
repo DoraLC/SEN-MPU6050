@@ -143,6 +143,10 @@ namespace SENMPU6050 {
     //% weight=100
     export function initMPU6050() {
         let buffer = pins.createBuffer(2);
+        buffer[0] = 0x1A; //config_address
+        buffer[1] = 0x06; //digital low pass filter level 6(MAX)
+        pins.i2cWriteBuffer(i2cAddress, buffer);
+        basic.pause(100);
         buffer[0] = power_mgmt;
         buffer[1] = 0;
         pins.i2cWriteBuffer(i2cAddress, buffer);
